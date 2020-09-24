@@ -1,0 +1,323 @@
+            @import "mixins.scss";
+            @import "variables.scss";
+            @import "animation.scss";
+            body {
+                margin: 0 auto;
+            }
+            
+            #headerPrinc {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-top: 1%;
+                margin-bottom: 1%;
+                img {
+                    margin-bottom: 1%;
+                    @media screen and(min-width: $ordiResp) {
+                        margin-bottom: 0;
+                    }
+                }
+                .logo_fleche {
+                    display: flex;
+                    img {
+                        margin-right: auto;
+                        margin-left: auto;
+                    }
+                    i {
+                        font-size: 1.5rem;
+                        margin-left: 5%;
+                        margin-top: 5px;
+                        text-decoration: none;
+                        color: black;
+                        @media screen and(min-width: $ordiResp) {
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+            
+            main {
+                background-color: $colorMenu;
+                header {
+                    background-color: $colorMenu;
+                    @media screen and(min-width: $ordiResp) {
+                        padding-top: 2%;
+                    }
+                    img {
+                        width: 100%;
+                        @media screen and(min-width: $ordiResp) {
+                            width: 30%;
+                            margin-right: auto;
+                            margin-left: auto;
+                            display: block;
+                            border-radius: 10%;
+                            display: none;
+                        }
+                    }
+                }
+            }
+            
+            article {
+                display: flex;
+                flex-direction: column;
+                border-radius: 5%;
+                position: relative;
+                bottom: 110px;
+                header {
+                    margin-top: 10%;
+                    border-top-left-radius: 45px;
+                    border-top-right-radius: 45px;
+                    display: flex;
+                    position: relative;
+                    h1 {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-left: 5%;
+                        @media screen and(min-width: $ordiResp) {
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                        font-weight: normal;
+                        span {
+                            font-family: $policeTittle;
+                            font-size: 1.7rem;
+                            @media screen and(min-width: $ordiResp) {
+                                font-size: 3rem;
+                            }
+                            @media screen and(max-width:$minResp) {
+                                margin-right: 1%;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .menu_coeur {
+                margin-top: 25px;
+                position: absolute;
+                right: 10%;
+                @media screen and(min-width: $ordiResp) {
+                    display: none;
+                }
+                &:hover {
+                    .coeur_plein {
+                        opacity: 1;
+                        transition: opacity 0.5s;
+                    }
+                    .coeur_vide {
+                        opacity: 0;
+                        transition: opacity 0.5s;
+                    }
+                }
+                .coeur_vide {
+                    color: rgb(0, 0, 0);
+                    opacity: 1;
+                    transition: 1.5s;
+                    font-size: 1.7rem;
+                }
+                .coeur_plein {
+                    position: absolute;
+                    right: 0px;
+                    background: -webkit-gradient(linear, left top, left bottom, from($colorPrimary), to(#c7a9c9));
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-size: 1.8rem;
+                    border: none;
+                    transition: 0.4s;
+                    opacity: 0;
+                }
+            }
+            
+            .partie_menu {
+                a {
+                    color: black;
+                }
+                .nom_partieMenu {
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 4%;
+                    font-family: $policePrinc;
+                    h4 {
+                        border-bottom: 3px solid $colorThird;
+                        width: 40px;
+                        font-weight: normal;
+                        @media screen and(min-width: $ordiResp) {
+                            font-size: 2rem;
+                            width: 75px;
+                            margin-left: 17%;
+                        }
+                    }
+                }
+                .liste_menu {
+                    box-shadow: 2px 3px 2px 0px white;
+                    margin-left: 3%;
+                    margin-right: 3%;
+                    margin-bottom: 5%;
+                    background-color: white;
+                    border-radius: 15px;
+                    display: flex;
+                    justify-content: space-between;
+                    font-family: $policePrinc;
+                    transition: 0.5s;
+                    @media screen and(min-width: $ordiResp) {
+                        margin-left: 20%;
+                        margin-right: 20%;
+                        .partie_gaucheMenu {
+                            p {
+                                width: 700px;
+                                text-overflow: initial;
+                            }
+                        }
+                    }
+                    @media screen and(max-width:$minResp) {
+                        .partie_gaucheMenu {
+                            p {
+                                width: 220px;
+                            }
+                        }
+                    }
+                }
+                .italic {
+                    font-style: italic;
+                }
+                p {
+                    white-space: nowrap;
+                    margin: 9px;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    width: 270px;
+                }
+                .partie_gaucheMenu {
+                    margin-left: 3%;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    .strong {
+                        font-weight: bold;
+                        font-size: 1.1rem;
+                    }
+                }
+                .prix_menu {
+                    position: absolute;
+                    top: 60%;
+                    right: 30px;
+                    font-weight: bold;
+                }
+            }
+            
+            .repere2 {
+                display: none;
+            }
+            
+            .boutton_commander {
+                @include order_button;
+                margin-top: 5%;
+                @media screen and(min-width: $ordiResp) {
+                    font-size: 2rem;
+                    padding: 2%;
+                    margin-left: 40%;
+                    margin-right: 40%;
+                    margin-top: 2%;
+                }
+                @media screen and(min-width:$tabResp) {
+                    font-size: 1.8rem;
+                }
+            }
+            
+            a {
+                text-decoration: none;
+            }
+            
+            #footer_cont {
+                display: flex;
+                flex-direction: column;
+                background-color: $colorFooter;
+                padding-left: 5%;
+                color: white;
+                @media screen and(min-width: $ordiResp) {
+                    padding-left: 2%;
+                }
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+                .omyfood {
+                    font-family: $policeTittle;
+                    font-size: 1.4rem;
+                    color: white;
+                }
+                #sous_footer {
+                    font-family: $policePrinc;
+                }
+                .fa-utensils {
+                    margin-right: 1.5%;
+                    @media screen and(min-width: $ordiResp) {
+                        margin-right: 0.4%;
+                    }
+                }
+            }
+            
+            .volet1 {
+                position: absolute;
+                left: 79%;
+                z-index: 0;
+                background-color: $colorThird;
+                width: 18%;
+                height: 77px;
+                border-top-right-radius: 14px;
+                border-bottom-right-radius: 12px;
+                color: white;
+                @media screen and(min-width: $ordiResp) {
+                    left: 61.9%;
+                }
+                i {
+                    margin-left: 30%;
+                    font-size: 2rem;
+                    line-height: 77px;
+                    @media screen and(min-width: $tabResp) {
+                        margin-left: 41%;
+                        font-size: 2.8rem;
+                    }
+                    @media screen and(min-width: $ordiResp) {
+                        font-size: 3.3rem;
+                        margin-left: 71%;
+                    }
+                }
+            }
+            
+            .animVolet {
+                &:hover {
+                    .liste_menu {
+                        margin-right: 19%;
+                        transition: margin-right 0.5s;
+                        @media screen and(min-width: $ordiResp) {
+                            margin-right: 27%;
+                            .partie_gaucheMenu {
+                                p {
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    width: 600px;
+                                }
+                            }
+                        }
+                        @media screen and(max-width:$minResp) {
+                            .partie_gaucheMenu {
+                                p {
+                                    width: 170px;
+                                }
+                            }
+                        }
+                    }
+                    .volet1 i {
+                        transform: rotate(360deg);
+                        transition: all 0.5s;
+                    }
+                    @media screen and(max-width: $ordiResp) {
+                        .liste_menu {
+                            p {
+                                width: 200px;
+                            }
+                        }
+                    }
+                }
+            }

@@ -1,0 +1,314 @@
+@import "variables.scss";
+@import "mixins.scss";
+@import "animation.scss";
+html {
+    scroll-behavior: smooth;
+}
+
+#headerPrinc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        font-family: $policeTittle;
+        position: relative;
+        bottom: 25px;
+        @media screen and(min-width: $ordiResp) {
+            bottom: 45px;
+        }
+    }
+}
+
+#sousLogo {
+    background-color: #EAEAEA;
+    height: auto;
+    box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+    position: relative;
+    bottom: 40px;
+    p {
+        text-align: center;
+        font-size: 1rem;
+        font-weight: bold;
+        font-family: $policePrinc;
+        i {
+            margin-right: 4%;
+            @media screen and(min-width: $ordiResp) {
+                margin-right: 1%;
+            }
+        }
+    }
+    @media screen and(min-width: $ordiResp) {
+        padding-right: 1%;
+    }
+}
+
+.chargement_page {
+    animation: chargement_site 2s;
+}
+
+body {
+    background-color: white;
+    margin: 0 auto;
+}
+
+.repere {
+    display: none;
+}
+
+main {
+    margin-top: -2%;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    background-color: $colorMenu;
+}
+
+#book_cont {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-bottom: 20%;
+    @media screen and(min-width: $ordiResp) {
+        margin-bottom: 5%;
+    }
+    h2 {
+        font-family: $policePrinc;
+        font-size: 1.7rem;
+        @media screen and(min-width: $ordiResp) {
+            font-size: 2rem;
+        }
+    }
+    p {
+        font-family: $policePrinc;
+        font-size: 1.2rem;
+        @media screen and(min-width: $ordiResp) {
+            font-size: 1.7rem;
+        }
+    }
+    .search_button {
+        @include search_button;
+        @media screen and(min-width: $ordiResp) {
+            font-size: 2rem;
+            padding: 2% 5%;
+        }
+    }
+}
+
+#how_works_cont {
+    position: relative;
+    background-color: white;
+    padding-bottom: 10%;
+    @media screen and(min-width: $ordiResp) {
+        padding-bottom: 5%;
+        background-color: $colorMenu;
+    }
+    h2 {
+        font-family: $policePrinc;
+        margin-left: 10%;
+        @media screen and(min-width: 1000px) {
+            text-align: center;
+            margin-left: 0%;
+            font-size: 1.6rem;
+        }
+    }
+    .how_works_button {
+        @include how_works_button;
+        margin-top: 10%;
+        @media screen and(min-width: 1300px) {
+            margin-top: 2%;
+            font-size: 1.4rem;
+            padding: 1%;
+            padding-left: 0%;
+            width: 30%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: justify;
+            background-color: white;
+        }
+        i {
+            margin-right: 10%;
+            margin-left: 10%;
+            font-size: 1.5rem;
+            color: $colorPrimary;
+            @media screen and(min-width: 1300px) {
+                margin-left: 20%;
+            }
+        }
+    }
+    .button3 {
+        background-color: rgb(248, 229, 248);
+    }
+}
+
+.number_circle {
+    @include number_circle;
+    position: absolute;
+    left: 8px;
+    @media screen and(min-width: 1300px) {
+        left: 34%;
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+        line-height: 40px;
+        margin-top: -0.3%;
+    }
+}
+
+#restaurants_cont {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0%;
+    align-items: center;
+    font-family: $policePrinc;
+    @media screen and(min-width: $ordiResp) {
+        display: flex;
+        flex-direction: initial;
+        justify-content: space-around;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    h2 {
+        margin-right: 40%;
+        margin-top: 15%;
+        @media screen and(min-width: $ordiResp) {
+            display: none;
+        }
+    }
+    .button_news1 {
+        @include news_button;
+        left: 210px;
+        bottom: 220px;
+    }
+    .button_news2 {
+        @include news_button;
+        left: 200px;
+        bottom: 220px;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    .menu {
+        transition: 0.5s;
+        &:hover {
+            @media screen and(min-width: $ordiResp) {
+                transform: scale(1.4);
+                transition: 0.7s;
+            }
+        }
+        background-color: white;
+        border-radius: 8%;
+        box-shadow: 0px 9px 18px -7px #787878;
+        margin-bottom: 7%;
+        padding-bottom: 3.2%;
+        margin-right: auto;
+        margin-left: auto;
+        @media screen and(min-width: $ordiResp) {
+            margin-bottom: 5%;
+            padding-bottom: 1%;
+        }
+        .menu_child {
+            display: flex;
+            justify-content: space-between;
+        }
+        .sousMenu {
+            display: flex;
+            flex-direction: column;
+            white-space: nowrap;
+            position: relative;
+        }
+        h2 {
+            text-align: center;
+            font-size: 1.7rem;
+            font-family: $policePrinc;
+        }
+        h3,
+        aside {
+            margin-left: 10%;
+            margin-bottom: 5%;
+            font-size: 1.2rem;
+        }
+        .bastille {
+            margin-left: 10%;
+            padding-bottom: 1.8%;
+        }
+        img {
+            border-radius: 8%;
+        }
+        .menu_coeur {
+            &:hover {
+                .coeur_plein {
+                    opacity: 1;
+                    transition: opacity 0.5s;
+                }
+                .coeur_vide {
+                    opacity: 0;
+                    transition: opacity 0.5s;
+                }
+            }
+            margin-top: 7%;
+            margin-right: 8%;
+            position: relative;
+            .coeur_vide {
+                color: rgb(0, 0, 0);
+                opacity: 1;
+                transition: 1.5s;
+                font-size: 1.7rem;
+            }
+            .coeur_plein {
+                position: absolute;
+                right: 0px;
+                background: -webkit-gradient(linear, left top, left bottom, from($colorPrimary), to(#c7a9c9));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 1.8rem;
+                border: none;
+                transition: 0.4s;
+                opacity: 0;
+            }
+        }
+    }
+}
+
+#footer_cont {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(62, 63, 63);
+    padding-left: 5%;
+    color: white;
+    @media screen and(min-width: $ordiResp) {
+        padding-left: 2%;
+    }
+    .omyfood {
+        font-family: $policeTittle;
+        font-size: 1.4rem;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    #sous_footer {
+        font-family: $policePrinc;
+    }
+    .fa-utensils {
+        margin-right: 1.5%;
+        @media screen and(min-width: $ordiResp) {
+            margin-right: 0.4%;
+        }
+    }
+}
+
+#heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    margin-top: 10px;
+}

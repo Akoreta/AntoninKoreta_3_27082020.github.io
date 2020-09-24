@@ -1,0 +1,76 @@
+@mixin search_button() {
+    &:hover {
+        opacity: 0.9;
+        box-shadow: 2px 10px 12px -7px #787878;
+    }
+    background: linear-gradient(to bottom, #eda1d7 5%, #942694 100%);
+    background-color: #f7c1e7;
+    border-radius: 28px;
+    border: 0px solid black;
+    color: #ffffff;
+    font-family: $policePrinc;
+    font-size: 1rem;
+    padding: 3% 8%;
+    text-decoration: none;
+    margin-top: 2%;
+}
+
+@mixin order_button() {
+    &:hover {
+        opacity: 0.8;
+        box-shadow: 2px 15px 12px -7px #787878;
+    }
+    background: linear-gradient(to bottom, #eda1d7 5%, #942694 100%);
+    background-color: #f7c1e7;
+    border-radius: 28px;
+    border: 0px solid black;
+    color: #ffffff;
+    font-family: $policePrinc;
+    font-size: 0.8rem;
+    padding: 5%;
+    text-decoration: none;
+    margin-top: 2%;
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+@mixin how_works_button() {
+    &:hover {
+        opacity: 0.7;
+        box-shadow: 2px 15px 18px -7px #787878;
+    }
+    box-shadow: 0px 9px 18px -7px #787878;
+    background-color: $colorMenu;
+    border-radius: 62px;
+    color: #050005;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: $policePrinc;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 3% 0% 5% 0%;
+    text-decoration: none;
+}
+
+@mixin news_button() {
+    background-color: #b5fae5;
+    border-radius: 10%;
+    border: 0px, solid;
+    color: #06810c;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 6px 25px;
+    position: absolute;
+}
+
+@mixin number_circle {
+    width: 20px;
+    background: $colorPrimary;
+    color: white;
+    height: 20px;
+    font-size: 0.7rem;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 20px;
+}
