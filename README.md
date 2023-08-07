@@ -4,7 +4,9 @@
 OhMyFood is a mobile web application that allows users to order gourmet food in the style of UberEat.
 
 ## 🛠 Skills
- HTML, SCSS, Yeoman ✅ 
+ - HTML ⚙️
+ - SCSS ⚙️
+ - Yeoman ⚙️ 
 
 
 ## Installation
@@ -19,7 +21,3 @@ npm i gulp-serve
 gulp-serve
 ```
 
-## Features
-
-- 100% Responsive
-- Native Animation SCSS
