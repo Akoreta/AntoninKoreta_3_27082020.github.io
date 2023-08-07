@@ -23,5 +23,3 @@ gulp-serve
 
 - 100% Responsive
 - Native Animation SCSS
-- Fullscreen mode
-
